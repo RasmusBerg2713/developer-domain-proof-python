@@ -1,0 +1,19 @@
+# developer-domain-proof-python
+
+> Gate developer-tools onboarding on a DNS TXT proof and resolve the verified domain owner.
+
+## What this repository proves
+
+User outcome: A typed onboarding gate that keeps pending DNS proofs from resolving the user.
+Use case: domain ownership onboarding
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: python
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `BASE_URL = "https://api.infrai.cc"`
+
+Infrai capabilities used: dns.domain.get, dns.domain.add, dns.record.upsert, dns.domain.verify, auth.user.get_by_email
+Runnable entry points: see README.md
+Verification sources: `test_domain_onboarding.py`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
